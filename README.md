@@ -1,7 +1,23 @@
 # Tic-Tac-Toe
+Tic Tac Toe - Play free | Planinc
+
+Tic-tac-toe is a simple logic game for two. The action takes place on a field of 3 × 3 cells. 
+Enjoy the classic game of Tic Tac Toe on Gg Planinc, where you can choose from 4 computer difficulties or play with a friend. 
+Play the classic Tic-Tac-Toe game (also called Noughts and Crosses) for free online with one or two players. 
+
+Enjoy the classic game of Tic-Tac-Toe (or Noughts and Crosses) with one or two players.
+
+
 ## Want to play Tic Tac Toe with your friend?
+Play tic tac toe online with a friend or the computer. Choose the game mode, level and name, and try to place 3 Xs or Os in a row.
+Enjoy this classic puzzle game on a three-by-three square board. Learn how to play strategically
+
+2024Super Tic Tac Toe is a classic game to a new level. 
 ## Just click on the link below
-### [Tic Tac Toe](https://sagar-sharma-7.github.io/Tic-Tac-Toe/)
+
+https://planinc.github.io/Tic-Tac-Toe/
+
+### [Tic Tac Toe](https://planinc.github.io/Tic-Tac-Toe/)
 
 ------
 
@@ -27,5 +43,5 @@
  ## Cloning this repositary using command line
  1. Open **Git Bash**.
  1. Change the current working directory to the location where you want the cloned directory.
- 1. Type `git clone https://github.com/Sagar-Sharma-7/Tic-Tac-Toe.git`
+ 1. Type `git clone https://github.com/planinc/Tic-Tac-Toe.git`
  1. Press **Enter** to create the clone of this repositary.
