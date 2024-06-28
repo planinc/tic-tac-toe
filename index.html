@@ -61,5 +61,68 @@
 <script type="text/javascript"> 
 LaggedAPI.init('lagdev_7292', 'ca-pub-1744887146349857');
 </script>
+    <a href="/" onclick="ID.login(authCallback);">Login</a>
+<a href="/" onclick="ID.register(authCallback);">Register</a>
+<script>
+  var authCallback = function(response) {
+    if (response) {
+      console.log(response, response.authResponse.details);
+    }
+  }
+
+  window.idAsyncInit = function() { // SDK downloaded
+    ID.init({
+      appId : '667cf03ddbc9b5402fc7f75f'
+    });
+
+    ID.Event.subscribe('id.init', function() { // SDK initialized
+      ID.getLoginStatus(function(data) { // Try Autologin
+        if (data.status == 'not_linked' || data.status == 'uncomplete') {
+          ID.login(loginCallback); // Connect/Request permission
+        } else {
+          // Not logged in
+        }
+      });
+    });
+  };
+</script>
+<script src="https://cdn.y8.com/api/sdk.js" async></script>
+
+<a href="/" id="idnet-connect">
+  Connect with Y8 Account to play
+</a>
+
+<script type="text/javascript">
+window.idAsyncInit = function() {
+    // When SDK is ready and when id.init event is triggered (all initialization processes are done i.e. ID.init called)
+    // We register an event with jQuery
+    // on click on the connect link it will open the Y8 Account authentication modal window
+    ID.Event.subscribe('id.init', function(){
+        $('#idnet-connect').on('click', function(){
+            ID.register();
+        });
+    });
+
+    // init the ID JS SDK
+    ID.init({
+        appId: '667cf03ddbc9b5402fc7f75f', // App ID from the app dashboard
+        status: true, // Force update the Y8 Account login status
+        responseType: 'code', // 'token' by default
+        redirectUri: 'https://mysite.com/callback' // override the redirect_uri
+    });
+};
+
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src =  document.location.protocol == 'https:' ? "https://cdn.y8.com/api/sdk.js" : "http://cdn.y8.com/api/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'id-jssdk'));
+</script>
+
+
+
+    
 </body>
 </html>
